@@ -1,0 +1,55 @@
+.center_column {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+  background-color: antiquewhite;
+  width: fit-content;
+  height: fit-content;
+}
+
+.contents {
+    width: 70vh;
+}
+h1 {
+    margin-bottom: 5vh;
+}
+textarea {
+    width: 50vh;
+    border-color: white;
+    resize: none; /* Prevents resizing of the textarea */
+    overflow: hidden; /* Hides the scrollbar */
+    margin-bottom: 2vh;
+  }
+
+.button {
+    margin-top: 2vh;
+    border-radius: 10%;
+    width: 8vh;
+    height: 5vh;
+}
+
+  input[type="submit"]:hover {
+    background-color: skyblue;
+    color: black;
+  }
+#blank_persent h5{
+  margin-bottom: 2vh;
+}
+.user_values {
+  display: inline;
+}
+
+.wrong-text {
+  color: red;
+}
+.correct-text {
+  color: blue;
+}
+
+.warning {
+  border: 2px solid red;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>영어 본문 암기 결과</title>
+</head>
+<body class="center_column">
+    <div class="container center_column">
+        <div class="contents center_column">
+            {{post.body | safe}}
+        </div>
+        <div class="contents center_column user_stendard">
+            <div class="correct">
+                <span>정답 개수</span>
+                <span style="color: blue;">{{correct_answer_num}}</span>
+            </div>
+            <div class="wrong">
+                <span>오답 개수</span>
+                <span style="color: red;">{{wrong_answer_num}}</span>
+            </div>
+            <form action="/">
+                <input type="submit" class="button" value="홈으로">
+            </form>
+        </div>
+    </div>
+    <script src="{{url_for('static', filename='js/app.js')}}"></script>
+    <script>
+        if (performance.navigation.type === 2) {
+            window.location.href = "/";
+        }
+    </script>
+</body>
+</html>

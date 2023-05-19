@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css')}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>영어 본문 암기 도우미</title>
+</head>
+<body class="center_column">
+  <div class="container center_column">
+    <h1>영어 본문 암기 도우미</h1>
+    <div class="contents center_column">
+      <form action="/main" method="post" class="center_column">
+        <textarea onfocus="clearText()" id="myInput" rows="1" oninput="autoResize()" name="texts" onblur="fillText()">여기에 본문을 입력하세요.</textarea>
+        <div id="blank_persent" class="center_column">
+          <h5>한 문장 당 빈칸율을 설정합니다.</h5>
+          <div>0이상 1이하의 수를 넣어 주세요. : <input type="number" min="0.00" max="1.00" step="0.1" name="blank_persent" required>
+          </div></div>
+        <input type="submit" value="확인" class="button">
+      </form>
+    </div>
+    
+  </div>
+  <script src="{{url_for('static', filename='js/app.js')}}"></script>
+</body>
+</html>
