@@ -13,4 +13,3 @@ def result_text(unblanked_text: list, user_values:dict):
 
     user_memorize_standard={'정답 개수':corret_texts_num, '오답 개수':wrong_texts_num}
     return unblanked_text, user_memorize_standard
-
